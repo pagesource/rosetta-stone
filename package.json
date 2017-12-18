@@ -1,0 +1,60 @@
+{
+  "name": "@eXTract/ruby",
+  "version": "0.0.1",
+  "description": "A mobile-first e-commerce PWA.",
+  "author": "agoel43@sapient.com",
+  "license": "ISC",
+  "keywords": [
+    "react",
+    "next.js",
+    "firebase",
+    "workbox",
+    "e-commerce",
+    "pwa"
+  ],
+  "engines": {
+    "node": "^8.1.0"
+  },
+  "scripts": {
+    "lint": "xo",
+    "dev": "next",
+    "build": "next build && node generate-sw.js",
+    "report": "npm run build --report && cat .next/stats.txt",
+    "start": "NODE_ENV=production node server.js",
+    "deploy": "now --name=ruby-pwa --public",
+    "remove": "now rm ruby-pwa --safe"
+  },
+  "dependencies": {
+    "compression": "^1.6.2",
+    "firebase": "^4.1.2",
+    "firebase-hackernews": "^2.9.0",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "4.0.0-beta.1",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "webpack": "^3.8.1"
+  },
+  "devDependencies": {
+    "express": "^4.15.3",
+    "globby": "^6.1.0",
+    "load-json-file": "^2.0.0",
+    "webpack-bundle-size-analyzer": "^2.7.0",
+    "workbox-build": "^1.0.1",
+    "workbox-webpack-plugin": "^1.0.1",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "semicolon": false,
+    "env": {
+      "browser": true
+    },
+    "globals": [
+      "window",
+      "performance",
+      "firebase"
+    ]
+  },
+  "publishConfig": {
+    "@<eXTract>:registry": "https://appx.tools.publicis.sapient.com:443/artifactory/api/npm/npm-release/"
+  }
+}
