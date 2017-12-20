@@ -21,6 +21,7 @@
     "build": "next build && node generate-sw.js",
     "report": "npm run build --report && cat .next/stats.txt",
     "start": "NODE_ENV=production node server.js",
+    "start_win":"SET NODE_ENV=production&&node server.js",
     "deploy": "now --name=ruby-pwa --public",
     "remove": "now rm ruby-pwa --safe"
   },

@@ -12,7 +12,9 @@ npm install
 npm run build
 
 # Starts the application in production mode with express
-npm start
+Mac user - npm start
+
+Windows user - npm run start_win
 
 # Builds the app for analyzing
 npm run report
